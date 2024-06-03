@@ -4,8 +4,7 @@ import { RsGenericHeaderDto } from './rs-generic-header.dto';
 
 export class RsLoginUserDataDto {
   session_token: string;
-  user_id: number;
-  role_id: number;
+  email: string;
 }
 
 /* ------------------------------- */

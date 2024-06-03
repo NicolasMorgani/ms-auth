@@ -10,10 +10,9 @@ export class RegisterFactoryService implements IRegisterUserFactory {
 
   DTORequesttoRegisterEntity(rqRegisterUserDto: RqRegisterUserDto): UserSecurity {
     const us = new UserSecurity();
-    us.username = rqRegisterUserDto.username;
+    us.email = rqRegisterUserDto.email;
     us.password = rqRegisterUserDto.password;
-    us.user_id = rqRegisterUserDto.user_id;
-    us.role_id = rqRegisterUserDto.role_id;
+    
     return us;
   }
 
@@ -29,7 +28,7 @@ export class RegisterFactoryService implements IRegisterUserFactory {
       { statusCode, message },   // header
        userSecurity // Check if user information is available            
         ? {                      // add data 
-            id: userSecurity.id
+            email: userSecurity.email
           }
         : null,                  // without data
     );

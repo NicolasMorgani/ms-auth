@@ -3,7 +3,7 @@ import { RsGenericHeaderDto } from "./rs-generic-header.dto";
 /* ------------------------------- */
 
 export class RsRegisterUserDataDto {
-    id: number;
+    email: string;
 }
 
 /* ------------------------------- */

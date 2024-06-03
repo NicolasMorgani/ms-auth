@@ -14,7 +14,7 @@ export class LoginFactoryService implements ILoginFactory {
   DTORequesttoLoginEntity(rqLoginUserDto: RqLoginUserDto): UserSecurity {
 
     const us = new UserSecurity();
-    us.username = rqLoginUserDto.username;
+    us.email = rqLoginUserDto.email;
     us.password = rqLoginUserDto.password;
     return us;
   }
@@ -32,8 +32,8 @@ export class LoginFactoryService implements ILoginFactory {
        userSecurity // Check if user information is available            
         ? {                      // add data 
             session_token: '',
-            user_id: userSecurity.user_id,
-            role_id: userSecurity.role_id,
+            email: userSecurity.email,
+            
           }
         : null,                  // without data
     );

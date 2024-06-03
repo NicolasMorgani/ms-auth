@@ -8,16 +8,12 @@ export class UserSecurity {
   id: number;
   
   @Column({unique: true})
-  username: string;
+  email: string;
 
   @Column()
   password: string;
 
-  @Column()
-  user_id?: number;
-
-  @Column()
-  role_id?: number;
+ 
 
 }
 

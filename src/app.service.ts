@@ -45,7 +45,7 @@ export class AppService {
 
     try {
       const loginDB = await this.userSecurityRepository.findOneBy({
-        username: login.username,
+        email: login.email,
       });
 
       if (loginDB !== null) {
